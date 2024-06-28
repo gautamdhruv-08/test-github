@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Define a CSS class for the numbering */
+        .numbered {
+            position: relative;
+            padding-left: 20px; /* Add left padding to make space for the number */
+        }
+
+        /* Use the ::before pseudo-element to generate the numbers */
+        .numbered::before {
+            content: counter(item); /* Use the "counter()" function to display a number */
+            counter-increment: item; /* Increment the "item" counter */
+            position: absolute;
+            left: 0;
+        }
+    </style> 
+    <link rel="stylesheet" href="Que4grid.css">
+</head>
+<body>
+    <!-- Add the "numbered" class to elements you want to number -->
+    <div class="numbered">Item 1</div>
+    <div class="numbered">Item 2</div>
+    <div class="numbered">Item 3</div>
+</body>
+</html>
